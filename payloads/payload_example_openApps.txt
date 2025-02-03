@@ -1,0 +1,13 @@
+REM Opens Calendar, google maps, and email client
+DELAY 200
+REM COMMAND + L opens google calendar
+WINDOWS L
+DELAY 5000
+REM COMMAND + M opens  google maps
+WINDOWS M
+DELAY 5000
+REM COMMAND + E opens email client
+WINDOWS E
+DELAY 5000
+REM Youtube COMMAND + Y
+REM Phone Contacts COMMAND + C

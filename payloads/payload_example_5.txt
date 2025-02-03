@@ -1,0 +1,16 @@
+REM Opens a private browser to 
+DELAY 200
+ESCAPE
+GUI d
+ALT ESCAPE
+GUI b
+DELAY 700
+REM Browser is equal to CTRL + N
+NORMAL_BROWSER
+DELAY 700
+CTRL l
+DELAY 300
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+DELAY 700
+ENTER
+DELAY 700
