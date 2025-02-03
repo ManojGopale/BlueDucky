@@ -145,6 +145,10 @@ DELAY 300
 
 ## Enjoy experimenting with BlueDucky! 🌟
 
+## More resources
+1. [Android keyboard shortcuts](https://support.databeat.net/en/useful-android-keyboard-shortcuts) - Navigate android device using keyboard
+2. [Keyboard shortcuts for gmail](https://support.google.com/mail/answer/6594?hl=en&co=GENIE.Platform%3DAndroid&oco=1) - Navigate gmail on android phone using keyboard shortcuts and keys.
+3. [Key mapping to Android](https://source.android.com/docs/core/interaction/input/keyboard-devices#hid-keyboard-and-keypad-page-0x07) - Map of hex values and corresponding keyboard keys. 
 
 
 
