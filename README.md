@@ -1,5 +1,9 @@
 Forked from [https://github.com/pentestfunctions/BlueDucky](https://github.com/pentestfunctions/BlueDucky) and modified for my own usecases.
 
+Follow instructions.txt to install Kali linux in VMware. 
+
+
+start_bluetooth.sh --> Commands to start bluetooth service and toggle bluetooth on from terminal. 
 
 # BlueDucky Ver 2.1 (Android) 🦆
 
