@@ -1,3 +1,6 @@
+Forked from [https://github.com/pentestfunctions/BlueDucky](https://github.com/pentestfunctions/BlueDucky) and modified for my own usecases.
+
+
 # BlueDucky Ver 2.1 (Android) 🦆
 
 Thanks to all the people at HackNexus. Make sure you come join us on VC !
