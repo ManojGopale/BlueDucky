@@ -1,0 +1,12 @@
+REM Opens a private browser to 
+DELAY 200
+ESCAPE
+GUI d
+ALT ESCAPE
+GUI b
+DELAY 700
+REM Browser is equal to CTRL + N
+MESSENGER_APP
+DELAY 700
+STRING this is a message
+DELAY 700

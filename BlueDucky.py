@@ -334,8 +334,50 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                 continue
             if line.startswith("TAB"):
                 client.send_keypress(Key_Codes.TAB)
+            if line.startswith("DOWN"):
+                client.send_keypress(Key_Codes.DOWN)
+            if line.startswith("ENTER"):
+                client.send_keypress(Key_Codes.ENTER)
+            if line.startswith("FORWARD_EMAIL"):
+                client.send_keypress(Key_Codes.f)
             if line.startswith("PRIVATE_BROWSER"):
                 report = bytes([0xa1, 0x01, Modifier_Codes.CTRL.value | Modifier_Codes.SHIFT.value, 0x00, Key_Codes.n.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(report)
+                # Don't forget to send a release report afterwards
+                release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(release_report)
+            ##Incognito cannot be shared on zoom, so changed to normal browser
+            ##CTRL+t opens in new tab of existing browser
+            if line.startswith("NORMAL_BROWSER"):
+                report = bytes([0xa1, 0x01, Modifier_Codes.CTRL.value, 0x00, Key_Codes.t.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(report)
+                # Don't forget to send a release report afterwards
+                release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(release_report)
+            ##Open messenger Windows+S
+            if line.startswith("MESSENGER_APP"):
+                report = bytes([0xa1, 0x01, Modifier_Codes.WINDOWS.value, 0x00, Key_Codes.s.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(report)
+                # Don't forget to send a release report afterwards
+                release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(release_report)
+            ##Open email client Windows+E
+            if line.startswith("EMAIL_APP"):
+                report = bytes([0xa1, 0x01, Modifier_Codes.WINDOWS.value, 0x00, Key_Codes.e.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(report)
+                # Don't forget to send a release report afterwards
+                release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(release_report)
+            ##Send email Ctrl + Enter
+            if line.startswith("SEND_EMAIL"):
+                report = bytes([0xa1, 0x01, Modifier_Codes.CTRL.value, 0x00, Key_Codes.ENTER.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(report)
+                # Don't forget to send a release report afterwards
+                release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+                client.send(release_report)
+            ## Check open apps ALT + TAB (OPTION + TAB on MAC)
+            if line.startswith("CHECK_APPS"):
+                report = bytes([0xa1, 0x01, Modifier_Codes.ALT.value, 0x00, Key_Codes.TAB.value, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
                 client.send(report)
                 # Don't forget to send a release report afterwards
                 release_report = bytes([0xa1, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])

