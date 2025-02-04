@@ -1,6 +1,8 @@
 Forked from [https://github.com/pentestfunctions/BlueDucky](https://github.com/pentestfunctions/BlueDucky) and modified for my own usecases.
 
-Follow instructions.txt to install Kali linux in VMware. 
+Follow instructions.txt to install 
+1. Kali linux in VMware
+2. BlueDucky on Kali linux to run the bluetooth vulnerability.
 
 
 start_bluetooth.sh --> Commands to start bluetooth service and toggle bluetooth on from terminal. 
