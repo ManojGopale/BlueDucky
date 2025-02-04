@@ -1,0 +1,41 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo aprt-get dist-upgrade
+sudo apt autoremove ##Remove unnecessary libraries and dependencies
+
+##Install 
+sudo apt install -y bluez-tools bluez-hcidump libbluetooth-dev git gcc python3-pip python3-setuptools python3-pydbus
+
+##Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+#Create a python project to install libraries
+uv init bluetooth_hack
+cd bluetooth_hack
+uv add black ##Add black library to the project
+
+##UV environment does not elt us install pybluez. Discarding uv environment
+git clone https://github.com/bluez/bluez.git
+sudo gcc -o bdaddr ~/Documents/bluez/tools/bdaddr.c ~/Documents/bluez/src/oui.c -I ~/Documents/bluez -lbluetooth
+sudo cp bdaddr /usr/local/bin/
+
+git clone https://github.com/pentestfunctions/BlueDucky.git
+cd BlueDucky
+chmod 755 BlueDucky.py
+sudo python3 BlueDucky.py ##this should run the script to find devices. But not able to run
+
+##Use code from hi,my nam eis keyboard
+git clone https://github.com/marcnewlin/hi_my_name_is_keyboard.git
+
+sudo hcitool scan
+Scanning ...
+        38:1B:9E:82:06:39       n/a
+        58:CB:52:A1:FC:03       Pixel 3a
+
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+cp -rf payloads/payload_example_1.txt payloads/payload_example_3.txt
+Change line 13 to include the youtube link
+
+##If RFKILL blocks from switching bluetooth on
+rfkill unblock bluetooth
