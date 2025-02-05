@@ -11,7 +11,7 @@ https://www.kali.org/docs/virtualization/import-premade-vmware/
 ##Following instructions are taken from https://github.com/pentestfunctions/BlueDucky
 sudo apt-get update
 sudo apt-get upgrade
-sudo aprt-get dist-upgrade
+sudo apt-get dist-upgrade
 sudo apt autoremove ##Remove unnecessary libraries and dependencies
 
 ##Install 
