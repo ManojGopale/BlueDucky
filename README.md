@@ -6,6 +6,8 @@ Additional uses cases for remote access of phone via Bluetooth vulnerability
 3. Access messenger app on phone and send messages.
 4. Access google maps.
 
+🔗 [Youtube Video](https://www.youtube.com/watch?v=aCu8cRfEyM8): Demonstrates the vulenrability on an adrioid phone. 
+
 Follow instructions.txt to install 
 1. Kali linux in VMware
 2. BlueDucky on Kali linux to run the bluetooth vulnerability.
